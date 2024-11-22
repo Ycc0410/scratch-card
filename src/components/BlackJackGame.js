@@ -70,11 +70,11 @@ const BlackJackGame = () => {
       <div className="cards">
         <div>
           <h3>玩家的牌 ({playerScore})</h3>
-          <div>{playerCards.join(', ') || '無牌'}</div>
+          <div className="card-number">{playerCards.join(', ') || '無牌'}</div>
         </div>
         <div>
           <h3>電腦的牌 ({gameOver ? dealerScore : '?'})</h3>
-          <div>
+          <div className="card-number">
             {gameOver ? dealerCards.join(', ') : dealerCards.map(() => 'X').join(', ')}
           </div>
         </div>

@@ -16,40 +16,54 @@
   flex-wrap: wrap; /* 如果內容過多，允許換行 */
   justify-content: center; /* 水平居中 */
   align-items: center; /* 垂直居中 */
-  border: 2px solid #000; /* 黑色邊框 */
+  border: 2px solid #d62828; /* 改為紅色邊框，符合過年風格 */
   padding: 20px; /* 框內的內容間距 */
-  border-radius: 10px; /* 圓角 */
+  border-radius: 15px; /* 圓角設計 */
   width: 80%; /* 框的寬度 */
-  max-width: 400px; /* 限制最大寬度 */
-  background-color: #f9f9f9; /* 背景顏色 */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 添加陰影 */
+  max-width: 500px; /* 限制最大寬度 */
+  background: linear-gradient(135deg, #ffd700, #ff4500); /* 金色到橙色漸變背景 */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* 更強的陰影效果 */
   text-align: center;
+  color: #fff; /* 白色文字 */
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .card-number {
   display: inline-block; /* 每個數字框都是獨立的 inline 塊 */
-  font-size: 1.2rem; /* 字體大小 */
-  margin: 5px; /* 每個數字框之間的距離 */
-  padding: 5px 10px; /* 內邊距 */
-  border: 1px solid #ccc; /* 數字框的邊框 */
-  border-radius: 5px; /* 圓角設計 */
-  background-color: #fff; /* 數字框背景顏色 */
-  color: #333; /* 字體顏色 */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 陰影效果 */
+  font-size: 1.5rem; /* 增大字體大小 */
+  margin: 10px; /* 每個數字框之間的距離 */
+  padding: 10px 15px; /* 內邊距 */
+  border: 2px solid #fff; /* 數字框的邊框，白色更突出 */
+  border-radius: 10px; /* 圓角設計 */
+  background-color: rgba(255, 255, 255, 0.8); /* 半透明白色背景 */
+  color: #d62828; /* 紅色文字 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* 陰影效果 */
+  font-weight: bold;
 }
 
 button {
-  margin: 5px;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
+  margin: 10px;
+  padding: 15px 30px; /* 更大按鈕尺寸 */
+  background: linear-gradient(135deg, #ff4500, #d62828); /* 橙色到紅色漸變 */
+  color: #fff; /* 白色文字 */
   border: none;
-  border-radius: 5px;
+  border-radius: 10px; /* 圓角按鈕 */
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 1.2rem; /* 增大字體 */
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* 按鈕陰影 */
 }
 
 button:hover {
-  background-color: #0056b3;
-  transform: scale(1.1);
+  background: linear-gradient(135deg, #d62828, #ff4500); /* 漸變反轉 */
+  transform: scale(1.1); /* 懸停放大效果 */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* 懸停更強的陰影 */
 }
+
+button:active {
+  transform: scale(0.95); /* 點擊時縮小效果 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 點擊時減弱陰影 */
+}
+
