@@ -9,28 +9,23 @@
 }
 
 h1 {
-  font-size: 3rem; /* 增大標題字體 */
+  font-size: 4rem; /* 增大標題字體 */
   color: #d62828; /* 大紅色文字 */
   font-family: 'ZCOOL XiaoWei', serif; /* 使用中文風格字體 */
   text-shadow: 2px 2px 5px #ffd700; /* 添加金色陰影效果 */
-  margin-bottom: 30px; /* 與下方內容距離 */
+  margin-bottom: 40px;
 }
 
 .menu {
-  background: rgba(255, 255, 255, 0.8); /* 白色半透明背景 */
-  padding: 50px; /* 增大框框內的邊距 */
-  border-radius: 15px; /* 圓角 */
-  display: inline-block;
-  margin-top: 5%; /* 與頁面頂部的距離 */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加陰影效果 */
-  width: 80%; /* 調整框的寬度 */
-  max-width: 900px; /* 最大寬度 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .menu-buttons {
   display: flex;
   justify-content: center;
-  gap: 30px; /* 增大按鈕間的距離 */
+  gap: 40px; /* 增大按鈕間距 */
 }
 
 .menu-buttons button {
@@ -38,24 +33,24 @@ h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px; /* 增大按鈕內邊距 */
+  padding: 30px; /* 增大按鈕內邊距 */
   border: 3px solid #d62828; /* 紅色邊框 */
-  border-radius: 10px; /* 圓角 */
+  border-radius: 15px; /* 圓角 */
   background-color: #ffd700; /* 金色背景 */
   cursor: pointer;
-  font-size: 20px; /* 增大按鈕文字 */
+  font-size: 24px; /* 增大按鈕文字 */
   font-weight: bold;
   transition: transform 0.3s ease, background-color 0.3s ease; /* 動畫效果 */
-  width: 200px; /* 增大按鈕寬度 */
-  height: 250px; /* 增大按鈕高度 */
+  width: 300px; /* 增大按鈕寬度 */
+  height: 350px; /* 增大按鈕高度 */
   color: #d62828; /* 紅色文字 */
 }
 
 .menu-buttons button img {
-  width: 160px; /* 增大圖片寬度 */
-  height: 160px; /* 增大圖片高度 */
+  width: 250px; /* 增大圖片寬度 */
+  height: 200px; /* 增大圖片高度 */
   object-fit: cover; /* 保持圖片比例 */
-  margin-bottom: 15px; /* 圖片與文字間距 */
+  margin-bottom: 20px; /* 圖片與文字間距 */
   border-radius: 10px; /* 圖片圓角 */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* 圖片陰影效果 */
 }
@@ -64,31 +59,4 @@ h1 {
   background-color: #d62828; /* 懸停時背景變為紅色 */
   color: #fff; /* 文字變為白色 */
   transform: scale(1.1); /* 按鈕放大效果 */
-}
-/* 確保 body 和 html 占滿全屏 */
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-}
-
-/* 設置背景圖片滿版 */
-.App {
-  min-height: 100vh; /* 保證背景覆蓋整個視窗高度 */
-  background-image: url('./assest/chinese-new-year-bg.jpg'); /* 背景圖片路徑 */
-  background-size: cover; /* 圖片完全覆蓋背景 */
-  background-repeat: no-repeat; /* 背景圖片不重複 */
-  background-position: center; /* 背景居中 */
-}
-
-/* 確保內部內容正常居中 */
-.menu {
-  background: rgba(255, 255, 255, 0.9); /* 半透明背景 */
-  padding: 30px;
-  border-radius: 15px;
-  width: 80%;
-  max-width: 900px;
-  margin: 50px auto; /* 水平和垂直居中 */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 輕微陰影 */
 }

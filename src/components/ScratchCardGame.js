@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './ScratchCardGame.css';
-import redEnvelope from '../assest/red-envelope.png'; // 確保圖片路徑正確
+import redEnvelope from '../assest/red-envelope.png'; // 確認圖片路徑正確
 
 const ScratchCardGame = () => {
   const [isScratched, setIsScratched] = useState(false);
   const [result, setResult] = useState(null);
-  const [showResult, setShowResult] = useState(false); // 是否顯示結果
+  const [showResult, setShowResult] = useState(false);
   const canvasRef = useRef(null);
 
   const generateResult = () => {
@@ -31,7 +31,7 @@ const ScratchCardGame = () => {
       ctx.arc(x, y, 20, 0, Math.PI * 2); // 圓形擦除區域
       ctx.fill();
 
-      checkScratchProgress(); // 檢查刮開進度
+      checkScratchProgress();
     }
   };
 
@@ -43,12 +43,13 @@ const ScratchCardGame = () => {
     let transparentPixels = 0;
 
     for (let i = 3; i < pixels.length; i += 4) {
-      if (pixels[i] === 0) transparentPixels++; // 計算透明像素
+      if (pixels[i] === 0) transparentPixels++;
     }
 
-    const transparentPercentage = (transparentPixels / (canvas.width * canvas.height)) * 100;
+    const transparentPercentage =
+      (transparentPixels / (canvas.width * canvas.height)) * 100;
     if (transparentPercentage > 50) {
-      setShowResult(true); // 當刮開超過 50% 時顯示結果
+      setShowResult(true);
       setIsScratched(true);
       setResult(generateResult());
     }
@@ -68,25 +69,26 @@ const ScratchCardGame = () => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
     const img = new Image();
-    img.src = redEnvelope;
+    img.src = redEnvelope; // 設定紅包圖片來源
     img.onload = () => {
-      ctx.drawImage(img, 0, 0, canvas.width, canvas.height); // 畫紅包圖片作為遮罩
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(img, 0, 0, canvas.width, canvas.height); // 將圖片繪製到畫布
     };
   };
 
   useEffect(() => {
-    drawOverlay(); // 初始加載遮罩
+    drawOverlay(); // 初始繪製紅包
   }, []);
 
   return (
     <section className="scratch-game">
-      <h2>試著刮開紅包，看看結果！</h2>
+      <h2>試著刮開紅包，看看你的獎品！</h2>
       <div className="scratch-card">
         <canvas
           ref={canvasRef}
           width={300}
           height={200}
-          onMouseMove={handleMouseMove} // 刮卡時觸發
+          onMouseMove={handleMouseMove}
         />
         {showResult && (
           <div className="result">

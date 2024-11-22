@@ -9,9 +9,9 @@
   margin: 20px auto;
   position: relative;
   overflow: hidden;
-  border-radius: 15px; /* 圓角設計 */
-  background: linear-gradient(45deg, #ffd700, #ff4500); /* 過年風格漸變色 */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 加陰影效果 */
+  border-radius: 15px;
+  background: white; /* 刮開後的底色 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
 
@@ -26,8 +26,7 @@ canvas {
   transform: translate(-50%, -50%);
   font-size: 24px;
   font-weight: bold;
-  color: #fff;
-  text-shadow: 2px 2px 4px #000;
+  color: black; /* 結果文字顏色 */
 }
 
 .reset-btn {
