@@ -1,0 +1,43 @@
+.scratch-game {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .scratch-card {
+    width: 300px;
+    height: 200px;
+    background: #aaa;
+    margin: 20px auto;
+    border: 2px solid #000;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .result {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000;
+  }
+  
+  .reset-btn {
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .reset-btn:hover {
+    background-color: #218838;
+  }
+  
