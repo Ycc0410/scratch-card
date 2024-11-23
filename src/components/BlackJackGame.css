@@ -5,65 +5,65 @@
 
 .cards {
   display: flex;
-  flex-direction: column; /* 垂直排列 */
-  align-items: center; /* 水平居中 */
-  gap: 20px; /* 框框之間的間距 */
+  flex-direction: column;
+  align-items: center; 
+  gap: 20px;
   margin: 20px 0;
 }
 
 .cards div {
-  display: flex; /* 使用 flex 排列內容 */
-  flex-wrap: wrap; /* 如果內容過多，允許換行 */
-  justify-content: center; /* 水平居中 */
-  align-items: center; /* 垂直居中 */
-  border: 2px solid #d62828; /* 改為紅色邊框，符合過年風格 */
-  padding: 20px; /* 框內的內容間距 */
-  border-radius: 15px; /* 圓角設計 */
-  width: 80%; /* 框的寬度 */
-  max-width: 500px; /* 限制最大寬度 */
-  background: linear-gradient(135deg, #ffd700, #ff4500); /* 金色到橙色漸變背景 */
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* 更強的陰影效果 */
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  align-items: center; 
+  border: 2px solid #f5eeee; 
+  padding: 20px;
+  border-radius: 15px; 
+  width: 80%; 
+  max-width: 500px; 
+  background: linear-gradient(135deg, #cc1103d5, #d30c01);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); 
   text-align: center;
-  color: #fff; /* 白色文字 */
+  color: #fff; 
   font-size: 1.2rem;
   font-weight: bold;
 }
 
 .card-number {
-  display: inline-block; /* 每個數字框都是獨立的 inline 塊 */
-  font-size: 1.5rem; /* 增大字體大小 */
-  margin: 10px; /* 每個數字框之間的距離 */
-  padding: 10px 15px; /* 內邊距 */
-  border: 2px solid #fff; /* 數字框的邊框，白色更突出 */
-  border-radius: 10px; /* 圓角設計 */
-  background-color: rgba(255, 255, 255, 0.8); /* 半透明白色背景 */
+  display: inline-block; 
+  font-size: 1.5rem; 
+  margin: 10px; 
+  padding: 10px 15px; 
+  border: 2px solid #fff; 
+  border-radius: 10px; 
+  background-color: rgba(255, 255, 255, 0.8); 
   color: #d62828; /* 紅色文字 */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* 陰影效果 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   font-weight: bold;
 }
 
 button {
   margin: 10px;
-  padding: 15px 30px; /* 更大按鈕尺寸 */
-  background: linear-gradient(135deg, #ff4500, #d62828); /* 橙色到紅色漸變 */
-  color: #fff; /* 白色文字 */
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #9a0505, #d62828); 
+  color: #fff; 
   border: none;
-  border-radius: 10px; /* 圓角按鈕 */
+  border-radius: 10px; 
   cursor: pointer;
-  font-size: 1.2rem; /* 增大字體 */
+  font-size: 1.2rem; 
   font-weight: bold;
   transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* 按鈕陰影 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
 }
 
 button:hover {
-  background: linear-gradient(135deg, #d62828, #ff4500); /* 漸變反轉 */
-  transform: scale(1.1); /* 懸停放大效果 */
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* 懸停更強的陰影 */
+  background: linear-gradient(135deg, #d62828, #ff4500); 
+  transform: scale(1.1); 
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); 
 }
 
 button:active {
-  transform: scale(0.95); /* 點擊時縮小效果 */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 點擊時減弱陰影 */
+  transform: scale(0.95); 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
 }
 

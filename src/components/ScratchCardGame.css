@@ -3,6 +3,14 @@
   margin: 20px;
 }
 
+.scratch-game h2 {
+  color: #ffffff; /* 白色文字 */
+  font-size: 1.5rem;
+  font-family: 'ZCOOL XiaoWei', serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 增加清晰度 */
+  margin-bottom: 20px;
+}
+
 .scratch-card {
   width: 300px;
   height: 200px;
@@ -10,13 +18,13 @@
   position: relative;
   overflow: hidden;
   border-radius: 15px;
-  background: white; /* 刮開後的底色 */
+  background: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
 
 canvas {
-  border-radius: 15px; /* 和框框的圓角一致 */
+  border-radius: 15px; 
 }
 
 .result {
@@ -26,7 +34,7 @@ canvas {
   transform: translate(-50%, -50%);
   font-size: 24px;
   font-weight: bold;
-  color: black; /* 結果文字顏色 */
+  color: rgb(148, 29, 29); 
 }
 
 .reset-btn {
@@ -43,4 +51,3 @@ canvas {
 .reset-btn:hover {
   background-color: #218838;
 }
-

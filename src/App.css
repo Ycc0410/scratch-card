@@ -1,18 +1,26 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .App {
-  text-align: center;
-  background-image: url('./assest/chinese-new-year-bg.jpg'); /* 背景圖片 */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  min-height: 100vh; /* 背景覆蓋整個視窗 */
-  color: #000;
+  background-image: url('./assest/chinese-new-year-bg.jpg'); /* 確保圖片路徑正確 */
+  background-size: cover; /* 確保圖片完全覆蓋背景 */
+  background-repeat: no-repeat; /* 不重複顯示背景圖片 */
+  background-position: center; /* 背景圖片居中 */
+  min-height: 100vh; /* 最小高度覆蓋整個視窗 */
+  width: 100%; /* 確保背景寬度覆蓋整個視窗 */
+  display: flex;
+  flex-direction: column; /* 如果有需要，可以讓內部內容垂直排列 */
 }
 
 h1 {
-  font-size: 4rem; /* 增大標題字體 */
-  color: #d62828; /* 大紅色文字 */
-  font-family: 'ZCOOL XiaoWei', serif; /* 使用中文風格字體 */
-  text-shadow: 2px 2px 5px #ffd700; /* 添加金色陰影效果 */
+  font-size: 4rem;
+  color: #ffffff; /* 改成白色 */
+  font-family: 'ZCOOL XiaoWei', serif; 
+  text-shadow: 2px 2px 5px #0c0c0c; 
   margin-bottom: 40px;
 }
 
@@ -25,7 +33,7 @@ h1 {
 .menu-buttons {
   display: flex;
   justify-content: center;
-  gap: 40px; /* 增大按鈕間距 */
+  gap: 40px;
 }
 
 .menu-buttons button {
@@ -33,30 +41,62 @@ h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 30px; /* 增大按鈕內邊距 */
-  border: 3px solid #d62828; /* 紅色邊框 */
-  border-radius: 15px; /* 圓角 */
-  background-color: #ffd700; /* 金色背景 */
+  padding: 30px; 
+  border: 3px solid #d62828; 
+  border-radius: 15px;
+  background-color: #e88437; 
   cursor: pointer;
-  font-size: 24px; /* 增大按鈕文字 */
+  font-size: 24px; 
   font-weight: bold;
-  transition: transform 0.3s ease, background-color 0.3s ease; /* 動畫效果 */
-  width: 300px; /* 增大按鈕寬度 */
-  height: 350px; /* 增大按鈕高度 */
-  color: #d62828; /* 紅色文字 */
+  transition: transform 0.3s ease, background-color 0.3s ease; 
+  width: 300px; 
+  height: 350px; 
+  color: #fbf1f1; 
 }
 
 .menu-buttons button img {
-  width: 250px; /* 增大圖片寬度 */
-  height: 200px; /* 增大圖片高度 */
-  object-fit: cover; /* 保持圖片比例 */
-  margin-bottom: 20px; /* 圖片與文字間距 */
-  border-radius: 10px; /* 圖片圓角 */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* 圖片陰影效果 */
+  width: 250px; 
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 20px; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 6px rgba(145, 7, 7, 0.3); 
 }
 
 .menu-buttons button:hover {
-  background-color: #d62828; /* 懸停時背景變為紅色 */
-  color: #fff; /* 文字變為白色 */
-  transform: scale(1.1); /* 按鈕放大效果 */
+  background-color: #d62828; 
+  color: #fff; 
+  transform: scale(1.1); 
 }
+
+
+.luck-game {
+  text-align: center;
+  margin: 20px;
+}
+
+.luck-result {
+  font-size: 24px;
+  color: #ffffff; /* 結果文字改為白色 */
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.luck-container {
+  color: #ffffff; /* 收集運氣文字為白色 */
+  text-align: center;
+  padding: 20px;
+}
+
+.merit-text {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  color: #ffffff; /* 字體顏色為白色 */
+}
+
+.luck-container img {
+  margin: 20px 0; /* 木魚圖片與文字的距離 */
+}
+
+
+

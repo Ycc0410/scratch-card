@@ -45,9 +45,9 @@ const BlackJackGame = () => {
     setDealerScore(newDealerScore);
 
     if (newDealerScore > 21) {
-      setMessage('電腦爆牌了！你贏了！');
+      setMessage('莊家爆牌了！你贏了！');
     } else if (newDealerScore >= playerScore) {
-      setMessage('電腦贏了！');
+      setMessage('莊家贏了！');
     } else {
       setMessage('你贏了！');
     }
@@ -69,12 +69,12 @@ const BlackJackGame = () => {
       <h2>21點遊戲</h2>
       <div className="cards">
         <div>
-          <h3>玩家的牌 ({playerScore})</h3>
-          <div className="card-number">{playerCards.join(', ') || '無牌'}</div>
+          <h3>玩家 ({playerScore})</h3>
+          <div>{playerCards.join(', ') || '點擊下方抽牌'}</div>
         </div>
         <div>
-          <h3>電腦的牌 ({gameOver ? dealerScore : '?'})</h3>
-          <div className="card-number">
+          <h3>莊家 ({gameOver ? dealerScore : '?'})</h3>
+          <div>
             {gameOver ? dealerCards.join(', ') : dealerCards.map(() => 'X').join(', ')}
           </div>
         </div>

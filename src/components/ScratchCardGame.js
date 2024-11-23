@@ -3,7 +3,6 @@ import './ScratchCardGame.css';
 import redEnvelope from '../assest/red-envelope.png'; // 確認圖片路徑正確
 
 const ScratchCardGame = () => {
-  const [isScratched, setIsScratched] = useState(false);
   const [result, setResult] = useState(null);
   const [showResult, setShowResult] = useState(false);
   const canvasRef = useRef(null);
@@ -50,19 +49,8 @@ const ScratchCardGame = () => {
       (transparentPixels / (canvas.width * canvas.height)) * 100;
     if (transparentPercentage > 50) {
       setShowResult(true);
-      setIsScratched(true);
       setResult(generateResult());
     }
-  };
-
-  const resetGame = () => {
-    setIsScratched(false);
-    setResult(null);
-    setShowResult(false);
-    const canvas = canvasRef.current;
-    const ctx = canvas.getContext('2d');
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    drawOverlay();
   };
 
   const drawOverlay = () => {
@@ -82,7 +70,7 @@ const ScratchCardGame = () => {
 
   return (
     <section className="scratch-game">
-      <h2>試著刮開紅包，看看你的獎品！</h2>
+      <h2>試試手氣！百萬獎金等你拿💰</h2>
       <div className="scratch-card">
         <canvas
           ref={canvasRef}
@@ -92,15 +80,10 @@ const ScratchCardGame = () => {
         />
         {showResult && (
           <div className="result">
-            {result === 0 ? '😢 很遺憾，沒有中獎！' : `🎉 恭喜！你贏了 ${result} 元！`}
+            {result === 0 ? '😢 很遺憾，沒有中獎...' : `🎊 恭喜！你贏得 ${result} 元獎金！`}
           </div>
         )}
       </div>
-      {isScratched && (
-        <button className="reset-btn" onClick={resetGame}>
-          再玩一次
-        </button>
-      )}
     </section>
   );
 };
